@@ -4,13 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ToDo List App – Productivity & Daily Motivation | Task Manager Android</title>
+<title>ToDo List App – Productivity & Daily Motivation</title>
 
-<meta name="description" content="ToDo List is a simple and powerful task manager for Android. Plan your day, add notes, reminders and get inspired with daily quotes.">
-<meta name="keywords" content="todo list app android, task manager app, productivity app, daily planner, reminder app, notes app">
+<meta name="description" content="ToDo List is a simple and powerful productivity app for Android. Manage tasks, reminders, notes and stay motivated every day.">
+<meta name="keywords" content="todo list app, android task manager, productivity app, reminder app, notes app, daily planner">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f172a">
+<meta name="theme-color" content="#0b1220">
+<link rel="canonical" href="https://micmr0.github.io/todo-list/">
 
+<!-- Open Graph -->
+<meta property="og:title" content="ToDo List App – Productivity & Motivation">
+<meta property="og:description" content="Organize tasks, set reminders and stay productive with ToDo List app for Android.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="screens/1.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Performance -->
+<link rel="preconnect" href="https://www.youtube-nocookie.com">
+
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -18,7 +32,7 @@
   "name": "ToDo List",
   "applicationCategory": "ProductivityApplication",
   "operatingSystem": "Android",
-  "description": "Task manager app with reminders, notes, daily quotes and productivity tools.",
+  "description": "Task manager app with reminders, notes and motivational tools.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -30,133 +44,173 @@
 <style>
 body{
   margin:0;
-  font-family:Arial;
-  background:#0b1220;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,#0b1220,#0a0f1a);
   color:white;
+}
+
+/* HERO */
+.hero{
   text-align:center;
-  overflow-x:hidden;
+  padding:90px 20px 60px;
+  position:relative;
+  overflow:hidden;
 }
 
-header {
-  position: relative;
-  padding: 80px 20px 50px;
-  overflow: hidden;
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top,#7c4dff33,transparent 60%);
+  z-index:0;
 }
 
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('screens/wallpaper.jpg') center/cover no-repeat;
-  opacity: 0.40;
-  z-index: 0;
+.hero-content{
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  margin:auto;
 }
 
-header .container {
-  position: relative;
-  z-index: 1;
+.hero h1{
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
-.container{max-width:1100px;margin:auto;padding:0 20px}
+.hero p{
+  opacity:0.7;
+}
 
-.logo{width:260px;margin-bottom:15px}
+.hero img.main-shot{
+  width:260px;
+  margin:30px auto 20px;
+  border-radius:28px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+  display:block;
+}
 
-h1{font-size:3em;margin:10px 0}
+.store-btn{
+  display:inline-block;
+  margin:30px 0 40px;
+}
 
-.app-logo {
-  width: 220px;
-  height: auto;
-  margin: 30px auto 25px;
-  display: block;
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+.store-btn img{
+  width:220px;
+  transition:0.25s;
+}
+
+.store-btn img:hover{
+  transform:scale(1.05);
+  filter:drop-shadow(0 8px 20px rgba(124,77,255,0.5));
+}
+
+/* VIDEO */
+.section{
+  max-width:1000px;
+  margin:60px auto;
+  padding:0 20px;
+  text-align:center;
 }
 
 .video iframe{
   width:100%;
   aspect-ratio:16/9;
   border:none;
-  border-radius:16px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-.app-info{
-  max-width:900px;
-  margin:50px auto;
-  text-align:left;
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:18px;
-  line-height:1.7;
-}
-
-.app-info h2{
-  text-align:center;
-  margin-bottom:15px;
-}
-
+/* SCREENS */
 .screens{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:20px;
+  gap:18px;
   padding:40px 20px;
 }
 
 .screens img{
-  width:210px;
-  border-radius:18px;
-  transition:.3s;
+  width:190px;
+  border-radius:20px;
+  transition:0.25s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .screens img:hover{
-  transform:scale(1.05);
+  transform:translateY(-6px) scale(1.04);
 }
 
+/* INFO */
+.info{
+  max-width:900px;
+  margin:60px auto;
+  padding:28px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:24px;
+  line-height:1.7;
+}
+
+.info .lead{
+  font-size:1.05rem;
+  opacity:0.9;
+}
+
+/* COMPARISON */
 .comparison{
   padding:60px 20px;
+  text-align:center;
 }
 
 .table{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:16px;
   flex-wrap:wrap;
 }
 
 .col{
-  background:#1e293b;
-  padding:20px;
-  border-radius:16px;
-  width:300px;
+  background:#141c2e;
+  padding:22px;
+  border-radius:20px;
+  width:280px;
+  border:1px solid rgba(255,255,255,0.06);
 }
 
 .plus{
-  border:2px solid #38bdf8;
+  border:2px solid #7c4dff;
 }
 
 .row{
   display:flex;
   justify-content:space-between;
   margin:8px 0;
-  border-bottom:1px solid #334155;
+  border-bottom:1px solid #2a3550;
   padding-bottom:6px;
 }
 
 .yes{color:#22c55e}
 .no{color:#ef4444}
 
+/* FAQ */
 .faq{
   max-width:900px;
-  margin:auto;
-  padding:60px 20px;
-  text-align:left;
+  margin:60px auto;
+  padding:0 20px;
 }
 
 details{
-  background:#1e293b;
+  background:#141c2e;
   margin:10px 0;
-  padding:15px;
-  border-radius:12px;
+  padding:16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.06);
+  transition:0.25s;
+}
+
+details:hover{
+  background:#18233a;
+  transform:translateY(-2px);
 }
 
 summary{
@@ -164,120 +218,131 @@ summary{
   font-weight:bold;
 }
 
+details p{
+  margin-top:10px;
+  opacity:0.85;
+}
+
+/* FOOTER */
 footer{
+  text-align:center;
   padding:40px;
-  opacity:.6;
+  opacity:0.7;
+  border-top:1px solid rgba(255,255,255,0.06);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="container">
+<section class="hero">
+  <div class="hero-content">
 
-<h1>ToDo List</h1>
-<img src="screens/logo.png" alt="ToDo List logo" class="app-logo">
+    <h1>ToDo List</h1>
+    <p>Simple productivity. Focus. Motivation.</p>
 
-<section class="video">
-<iframe src="https://www.youtube-nocookie.com/embed/YRTcSJTbAQs?rel=0" loading="lazy"></iframe>
+    <img class="main-shot"
+         src="screens/1.png"
+         alt="ToDo List app preview">
+
+    <a class="store-btn"
+       href="https://play.google.com/store/apps/details?id=com.micmr0.todolist"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img src="get_it.png" alt="Get it on Google Play">
+    </a>
+
+  </div>
 </section>
 
-<br>
-
-<a href="https://play.google.com/store/apps/details?id=com.micmr0.todolist"
-target="_blank" rel="noopener noreferrer">
-<img src="get_it.png" width="220" alt="Get it on Google Play">
-</a>
-
-</div>
-</header>
-
-<section class="app-info">
-<h2>App Info</h2>
-
-<p class="lead">📝 ToDo List – simple, focused and motivating productivity app.</p>
-
-<p>
-ToDo List is your personal organizer designed to help you stay productive, focused and inspired every day.
-It combines task management with motivational elements so you can not only plan — but also enjoy the process.
-</p>
-
-<p>With ToDo List you can:</p>
-
-<p>✔ Create and manage tasks easily in a clean interface</p>
-<p>📅 Organize tasks by day using a simple calendar system</p>
-<p>💡 Get a daily inspirational quote for motivation</p>
-<p>🗒 Add notes to keep important details in one place</p>
-<p>🔔 Set reminders so you never miss important tasks</p>
-<p>🔗 Share task lists with others when needed</p>
-
-<p class="lead">
-Productivity doesn’t have to be complicated — it should feel natural, fast and satisfying ⚡
-</p>
-
+<section class="section">
+  <h2>See it in action</h2>
+  <div class="video">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/YRTcSJTbAQs?rel=0"
+      title="ToDo List demo video"
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
 
 <section class="screens">
-<img src="screens/1.png">
-<img src="screens/2.png">
-<img src="screens/3.png">
-<img src="screens/4.png">
-<img src="screens/5.png">
+  <img src="screens/2.png" alt="Task list screen" loading="lazy">
+  <img src="screens/3.png" alt="Calendar view" loading="lazy">
+  <img src="screens/4.png" alt="Notes feature" loading="lazy">
+  <img src="screens/5.png" alt="Reminder system" loading="lazy">
+</section>
+
+<section class="info">
+  <h2>App Info</h2>
+
+  <p class="lead">📝 ToDo List – simple, focused and motivating productivity app.</p>
+
+  <p>
+    ToDo List is your personal organizer designed to help you stay productive, focused and inspired every day.
+    It combines task management with motivational elements so you can not only plan — but also enjoy the process.
+  </p>
+
+  <p>✔ Create and manage tasks easily in a clean interface</p>
+  <p>📅 Organize tasks by day using a simple calendar system</p>
+  <p>💡 Get a daily inspirational quote for motivation</p>
+  <p>🗒 Add notes to keep important details in one place</p>
+  <p>🔔 Set reminders so you never miss important tasks</p>
+  <p>🔗 Share task lists with others when needed</p>
+
+  <p class="lead">
+    Productivity doesn’t have to be complicated — it should feel natural, fast and satisfying ⚡
+  </p>
 </section>
 
 <section class="comparison">
-<h2>Free vs PLUS</h2>
+  <h2>Free vs PLUS</h2>
 
-<div class="table">
+  <div class="table">
 
-<div class="col">
-<h3>Free</h3>
-<div class="row"><span>Daily quote</span><span class="yes">✔</span></div>
-<div class="row"><span>Task management</span><span class="yes">✔</span></div>
-<div class="row"><span>Reminders</span><span class="yes">✔</span></div>
-<div class="row"><span>Notes</span><span class="yes">✔</span></div>
-<div class="row"><span>Share lists</span><span class="yes">✔</span></div>
-<div class="row"><span>Google Drive sync</span><span class="no">✖</span></div>
-<div class="row"><span>Latest features</span><span class="no">✖</span></div>
-</div>
+    <div class="col">
+      <h3>Free</h3>
+      <div class="row"><span>Tasks</span><span class="yes">✔</span></div>
+      <div class="row"><span>Lists</span><span class="yes">✔</span></div>
+      <div class="row"><span>Reminders</span><span class="yes">✔</span></div>
+      <div class="row"><span>Google Drive sync</span><span class="no">✖</span></div>
+      <div class="row"><span>Latest features</span><span class="no">✖</span></div>
+    </div>
 
-<div class="col plus">
-<h3>PLUS ⭐</h3>
-<div class="row"><span>Daily quote</span><span class="yes">✔</span></div>
-<div class="row"><span>Task management</span><span class="yes">✔</span></div>
-<div class="row"><span>Reminders</span><span class="yes">✔</span></div>
-<div class="row"><span>Notes</span><span class="yes">✔</span></div>
-<div class="row"><span>Share lists</span><span class="yes">✔</span></div>
-<div class="row"><span>Google Drive sync</span><span class="yes">✔</span></div>
-<div class="row"><span>Latest features</span><span class="yes">✔</span></div>
-</div>
+    <div class="col plus">
+      <h3>PLUS ⭐</h3>
+      <div class="row"><span>Tasks</span><span class="yes">✔</span></div>
+      <div class="row"><span>Lists</span><span class="yes">✔</span></div>
+      <div class="row"><span>Reminders</span><span class="yes">✔</span></div>
+      <div class="row"><span>Google Drive sync</span><span class="yes">✔</span></div>
+      <div class="row"><span>Latest features</span><span class="yes">✔</span></div>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <section class="faq">
-<h2>FAQ</h2>
+  <h2>FAQ</h2>
 
-<details>
-<summary>How to unlock PLUS?</summary>
-<p>1. Leave a review on Google Play<br>2. Request a promo code<br>3. Enter code in the app</p>
-</details>
+  <details>
+    <summary>How to unlock PLUS?</summary>
+    <p>Leave a review and request a promo code in the app.</p>
+  </details>
 
-<details>
-<summary>What does Google login do?</summary>
-<p>Your subscription is saved and restored when you change device or reinstall the app.</p>
-</details>
+  <details>
+    <summary>What does Google Drive sync do?</summary>
+    <p>Your data is securely saved and restored across devices.</p>
+  </details>
 
-<details>
-<summary>Having issues with subscription?</summary>
-<p>Clear app data in system settings and try again.</p>
-</details>
+  <details>
+    <summary>Having issues with subscription?</summary>
+    <p>Clear app data in system settings and try again.</p>
+  </details>
 
 </section>
 
 <footer>
-<p>© 2026 ToDo List</p>
+  <p>© 2026 ToDo List • micmr0</p>
 </footer>
 
 </body>
