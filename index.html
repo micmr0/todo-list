@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ToDo List App – Productivity & Daily Motivation | Task Manager Android</title>
+
+<meta name="description" content="ToDo List is a simple and powerful task manager for Android. Plan your day, add notes, reminders and get inspired with daily quotes.">
+<meta name="keywords" content="todo list app android, task manager app, productivity app, daily planner, reminder app, notes app">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f172a">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ToDo List",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Android",
+  "description": "Task manager app with reminders, notes, daily quotes and productivity tools.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b1220;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+header {
+  position: relative;
+  padding: 80px 20px 50px;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('screens/wallpaper.jpg') center/cover no-repeat;
+  opacity: 0.40;
+  z-index: 0;
+}
+
+header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.container{max-width:1100px;margin:auto;padding:0 20px}
+
+.logo{width:260px;margin-bottom:15px}
+
+h1{font-size:3em;margin:10px 0}
+
+.app-logo {
+  width: 220px;
+  height: auto;
+  margin: 30px auto 25px;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.video iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border:none;
+  border-radius:16px;
+}
+
+.app-info{
+  max-width:900px;
+  margin:50px auto;
+  text-align:left;
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:18px;
+  line-height:1.7;
+}
+
+.app-info h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.screens{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:40px 20px;
+}
+
+.screens img{
+  width:210px;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.screens img:hover{
+  transform:scale(1.05);
+}
+
+.comparison{
+  padding:60px 20px;
+}
+
+.table{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.col{
+  background:#1e293b;
+  padding:20px;
+  border-radius:16px;
+  width:300px;
+}
+
+.plus{
+  border:2px solid #38bdf8;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
+  border-bottom:1px solid #334155;
+  padding-bottom:6px;
+}
+
+.yes{color:#22c55e}
+.no{color:#ef4444}
+
+.faq{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+  text-align:left;
+}
+
+details{
+  background:#1e293b;
+  margin:10px 0;
+  padding:15px;
+  border-radius:12px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:bold;
+}
+
+footer{
+  padding:40px;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<h1>ToDo List</h1>
+<img src="screens/logo.png" alt="ToDo List logo" class="app-logo">
+
+<section class="video">
+<iframe src="https://www.youtube-nocookie.com/embed/YRTcSJTbAQs?rel=0" loading="lazy"></iframe>
+</section>
+
+<br>
+
+<a href="https://play.google.com/store/apps/details?id=com.micmr0.todolist"
+target="_blank" rel="noopener noreferrer">
+<img src="get_it.png" width="220" alt="Get it on Google Play">
+</a>
+
+</div>
+</header>
+
+<section class="app-info">
+<h2>App Info</h2>
+
+<p>📝 Your personal productivity companion with daily inspiration.</p>
+
+<p>ToDo List helps you organize your daily life — add tasks, plan your schedule and stay motivated every day.</p>
+
+<p>✨ What you can do:</p>
+<p>✔ Create and manage tasks easily</p>
+<p>📅 Assign tasks to specific days in your calendar</p>
+<p>💡 Daily quote for motivation and reflection</p>
+<p>🗑️ Remove completed or unnecessary tasks</p>
+<p>🔔 Set reminders for important tasks</p>
+
+<p>This is more than a to-do list — it's your productivity and focus assistant.</p>
+
+</section>
+
+<section class="screens">
+<img src="screens/1.png">
+<img src="screens/2.png">
+<img src="screens/3.png">
+<img src="screens/4.png">
+<img src="screens/5.png">
+</section>
+
+<section class="comparison">
+<h2>Free vs PLUS</h2>
+
+<div class="table">
+
+<div class="col">
+<h3>Free</h3>
+<div class="row"><span>Daily quote</span><span class="yes">✔</span></div>
+<div class="row"><span>Task management</span><span class="yes">✔</span></div>
+<div class="row"><span>Reminders</span><span class="yes">✔</span></div>
+<div class="row"><span>Notes</span><span class="yes">✔</span></div>
+<div class="row"><span>Share lists</span><span class="yes">✔</span></div>
+<div class="row"><span>Google Drive sync</span><span class="no">✖</span></div>
+<div class="row"><span>Latest features</span><span class="no">✖</span></div>
+</div>
+
+<div class="col plus">
+<h3>PLUS ⭐</h3>
+<div class="row"><span>Daily quote</span><span class="yes">✔</span></div>
+<div class="row"><span>Task management</span><span class="yes">✔</span></div>
+<div class="row"><span>Reminders</span><span class="yes">✔</span></div>
+<div class="row"><span>Notes</span><span class="yes">✔</span></div>
+<div class="row"><span>Share lists</span><span class="yes">✔</span></div>
+<div class="row"><span>Google Drive sync</span><span class="yes">✔</span></div>
+<div class="row"><span>Latest features</span><span class="yes">✔</span></div>
+</div>
+
+</div>
+</section>
+
+<section class="faq">
+<h2>FAQ</h2>
+
+<details>
+<summary>How to unlock PLUS?</summary>
+<p>1. Leave a review on Google Play<br>2. Request a promo code<br>3. Enter code in the app</p>
+</details>
+
+<details>
+<summary>What does Google login do?</summary>
+<p>Your subscription is saved and restored when you change device or reinstall the app.</p>
+</details>
+
+<details>
+<summary>Having issues with subscription?</summary>
+<p>Clear app data in system settings and try again.</p>
+</details>
+
+</section>
+
+<footer>
+<p>© 2026 ToDo List</p>
+</footer>
+
+</body>
+</html>
